@@ -1,35 +1,34 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useRef } from "react";
+import { counterActions } from "../redux";
+import { privacyActions } from "../redux";
 
 export default function Controls() {
   const dispatch = useDispatch();
   const Element = useRef();
 
   const handleIncrement = () => {
-    dispatch({ type: "Increment" });
+    dispatch(counterActions.increment());
   };
   const handleDecrement = () => {
-    dispatch({ type: "Decrement" });
+    dispatch(counterActions.decrement());
   };
 
   const handleAdd = () => {
-    dispatch({
-      type: "Add",
-      payload: {
-        num: Element.current.value,
-      },
-    });
+    dispatch(counterActions.add({ num: Element.current.value }));
     Element.current.value = 0;
   };
 
   const handleSubstract = () => {
-    dispatch({
-      type: "substract",
-      payload: {
-        num: Element.current.value,
-      },
-    });
+    dispatch(
+      counterActions.substract({ num: Element.current.value })
+    );
+    Element.current.value = 0;
+  };
+
+  const handlePrivacyToggle = () => {
+    dispatch(privacyActions.toggle());
   };
   return (
     <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
@@ -68,6 +67,13 @@ export default function Controls() {
         onClick={handleSubstract}
       >
         Substract
+      </button>
+      <button
+        type="button"
+        className="btn btn-warning"
+        onClick={handlePrivacyToggle}
+      >
+        Privacy
       </button>
     </div>
   );
