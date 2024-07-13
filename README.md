@@ -108,3 +108,77 @@ ki.so our question is why we use Redux toolkit
     configureStore({ reducer:{name:slice.reducer} })
 6.  export actions = slice.actions;
 7.  actions can be dispatched like: actions.reducerMethod(payload)
+
+# How to use Redux Toolkit
+
+1. sbse phele mene redux ko uninstall kia or redux toolkit ko install
+   kia jisko install kese krte hai store kese bante hai reducer kese
+   bante hai ek slice kese bna shakte hai jb likha hua hai bs hum
+   commands ko step by step follow krna hai
+
+# How we start the react project using redux toolkit
+
+1. sbse phele mene apna ui tayar kia or usme muje hmane add+
+   ,substract- , addnumber+100, substractnumber-100 or mai apna number
+   ko kese private reekhuga iss tra ek ui tayar kia
+
+2. ui tayar hone k baad mene uss ui k kuch components banye or
+   components wale folder mai daal diye , taaki jo hmara ui hai wo ek
+   alag jhnga rhe or jo hmari functionality hai wo alag rhe
+
+3. Ab redux toolkit ko use krne k lie mene redux ka ek alag folder
+   create kia or usme counter.js, counterprivacy.js or index.js ki
+   files banai jiska sbka alag alag kaam hia
+
+4. sbse phele hume store create krna tha to hum sbse phele index.js
+   mai gye or wha jaakr hamne import { configureStore } from
+   "@reduxjs/toolkit"; iss configureStore ko import kia
+
+5. uske baad mene ek name variable se configurstore ko start kia or
+   usme reducer ko dala or uss configureStore ko variable ka ek naam
+   dekr usko export kr diya
+
+6. ab redux toolkit mai reducers ko hum slices k throw lete hai islye
+   hum ek reducer mai multiple slice ko add kr shkte hai jo alag alag
+   actions ko perform krega, jo bhi action perform hoga wo reducer k
+   pass jayga or slice uss action or perform kregi
+
+7. ab hme pta hai reducer slices leta hai islye ab start krenge ki hum
+   slice ko create kese kr shakte hai
+
+8. ab hum gye apni counter.js file mai or wha ek counter naam se ek
+   slice banai sbse pehele humne ye waali command import ki, import {
+   createSlice } from "@reduxjs/toolkit"; jisse hum apni slice ko
+   create kr shakte hai ab jb bhi hum kisi variable k throw ek slice
+   ko create krte hai krte hai to slice humse 3-4 chize mangta hai
+   jese ki name, initialState, and reducer,
+
+9. name jese ki counter , initialState mai koi value like 0 or reducer
+   hamari uss initial State ko manage krta hai or ki hmari state +1,
+   -1 one hogi or ager hume kuch alag se dependency lagani hai to hum
+   uss action provide krte hia
+
+10. see the counter.js file in redux folder you understand in batter
+    way
+
+11. isi tra hum counterprivacy.js file mai jayenge or slice ko create
+    krenge or fir un slices ko use krne k lie unhe hume export bhi
+    krna hoga taaki hum use index.js file mai jo store bna hua hai
+    usme use kr ske
+
+12. Ab ager hme slices k actions ko perfore krna hai to hume naming
+    variable k throw counterSlice.action ko import krna hoga taaki
+    humne jha bhi unka use krna hai kr shke
+
+13. ab like mere pass kcuh +1 -1 one ka button hai or muje un pr
+    action perform krna hai to muje ek function k throw action perform
+    krunga or uss function mai uss action ko perform krunga jo mene
+    import kia hai
+
+14. Aage ki functionality hum compoents m jaakr dekenge ki wo kese
+    work krti hai or by chance ager apko functions smz nhi aate to app
+    comment kr shkte hoo functionality apko controls mai jaakr milegi
+
+15. This is only the dummy project to understand the Redux or
+    redux/toolkit this is very small project hope soo you will enjoy
+    it.
