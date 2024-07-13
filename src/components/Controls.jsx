@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useRef } from "react";
-import { counterActions } from "../redux";
-import { privacyActions } from "../redux";
+import { counterActions } from "../redux/counter";
+import { privacyActions } from "../redux/counterprivacy";
 
 export default function Controls() {
   const dispatch = useDispatch();
